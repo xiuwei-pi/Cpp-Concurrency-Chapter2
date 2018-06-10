@@ -16,7 +16,7 @@ int main(void)
 {
   X my_x;
   int num(0);
-  thread t(&X::do_lengthy_work,&my_x,num);
+  thread t(&X::do_lengthy_work,&my_x,num);//参数作为第三个参数
   t.join();
   return 0;
 }
